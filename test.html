@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+
+  function Fun() {
+
+  }
+
+  // console.log(Fun.prototype);
+  Fun.prototype.say = function () {
+    console.log('我是原型对象中的方法');
+  }
+  // console.log(Fun.prototype);
+  var fun = new Fun()
+
+  console.log(fun.run);
+
+</script>
+
+</body>
+</html>

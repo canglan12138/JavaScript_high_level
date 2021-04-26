@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>    
+<body>
+
+<script>
+	function Fn() {
+
+  }
+  Fn.prototype.test1 = function () {
+    console.log('test1()');
+  }
+  console.log(Object.prototype);
+  var fn = new Fn()
+	fn.test1()
+
+	fn.test2 = function () {
+    console.log('test2()');
+  }
+  fn.test2()
+  console.log(fn.toString());
+  console.log(fn.test2);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	var a
+  console.log(a,typeof a);//undefined "undefined"
+  console.log(undefined === 'undefined'); //false
+	a = null
+  console.log(a,typeof a, a === null) //null "object" true
+
+  var b1 = {
+    b2: [1, 'abc', console.log],
+    b3: function () {
+      console.log('b3')
+      return function () {
+        return 'xfzhang'
+      }
+    }
+  }
+  b1.b2[2](4) //4
+  console.log(typeof b1.b2[2]==='function') //true
+  console.log(typeof b1.b3); //function
+</script>
+
+</body>
+</html>
