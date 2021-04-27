@@ -7,16 +7,22 @@
 <body>
 
 <script>
-  console.log(a);
-  var a = 3
-	fun()
-  function fun() {
-    console.log('函数声明提前');
+ var a = 10
+ console.log(a);
+ function global_function() {
+   var c = 3
+		function inner_function1() {
+			var b = 6
+      console.log(b);
+    }
+    inner_function1()
+   function inner_function2() {
+     var b = 6
+     console.log(b);
+   }
+   inner_function2()
   }
-
-  // fun(a)
-  // console.log(window);
-
+  global_function()
 </script>
 
 </body>
