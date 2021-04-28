@@ -9,6 +9,10 @@
 <script>
   function fun(n,o) {
     console.log(o)
+
+		/*
+		* 通过让一个变量指向返回的对象，不让对象成为垃圾对象，进而保存外部函数的局部变量，延长外部函数局部变量的生命周期
+		* */
     return {
       fun:function(m){
         return fun(m,n);
