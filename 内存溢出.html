@@ -5,13 +5,14 @@
 	<title>Title</title>
 </head>
 <body>
-<script src="my_module.js"></script>
+
 <script>
-	var Info = my_module()
-	var info = new Info()
-	info.name()
-	info.age()
-	info.sex()
+	var arr = {}
+	for (var i = 0;i < 10000;i++) {
+	  arr[i] = new Array(100000)
+		arr[i] = null
+	}
 </script>
+
 </body>
 </html>

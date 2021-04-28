@@ -1,12 +1,14 @@
 function my_module() {
-    function name() {
-      console.log('jack');
+    function info() {
+      this.name = function () {
+        console.log('jack');
+      }
+      this.age = function () {
+        console.log(18);
+      }
+      this.sex = function () {
+        console.log('男');
+      }
     }
-    function age() {
-      console.log(18);
-    }
-    return {
-      name : name,
-      age : age
-    }
+    return info
 }
