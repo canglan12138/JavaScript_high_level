@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	function Father() {
+
+  }
+  Father.prototype.Father_say = function () {
+    console.log('i am father');
+  }
+
+  function Son() {
+
+  }
+  Son.prototype = new Father()
+  Son.prototype.Son_say = function () {
+    console.log('i am son');
+  }
+
+  var son = new Son()
+	son.Father_say()
+</script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	function creatPerson() {
+
+		}
+
+  creatPerson.prototype.setName = function (name) {
+    this.name = name
+  }
+
+  var teacher = new creatPerson()
+	teacher.name = 'jack'
+	teacher.age = 20
+  console.log(teacher.name, teacher.age);
+	teacher.setName('jack1')
+  console.log(teacher.name, teacher.age);
+
+  var student = new creatPerson()
+	student.name = 'www'
+	student.age = 66
+  console.log(student.name, student.age);
+  student.setName('aaa')
+  console.log(student.name, student.age);
+
+
+</script>
+
+</body>
+</html>

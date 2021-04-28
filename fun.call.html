@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	function Person(name,age) {
+	  this.name = name
+		this.age = age
+	}
+	Person.prototype.setName = function (name) {
+    this.name = name
+  }
+
+	function Student(name,age,price) {
+		Person.call(this,name,age) //为了得到属性
+		this.price = price
+  }
+
+  Student.prototype = new Person() //看到父类型的方法
+  Student.prototype.setPrice = function (price) {
+    this.price = price
+  }
+	Student.prototype.constructor = Student //修正属性
+
+	var s = new Student('张三',20,1000)
+  console.log(s.name, s.age, s.price);
+  console.log('-----------------');
+  s.setName('李四')
+	s.setPrice(2000)
+  console.log(s.name, s.age, s.price);
+
+
+</script>
+
+</body>
+</html>
