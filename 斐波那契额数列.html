@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="数值">
+<button>按钮</button>
+<h2></h2>
+<script>
+	var input = document.getElementsByTagName('input')[0]
+	var btn = document.getElementsByTagName('button')[0]
+	btn.onclick = function () {
+	  var num = parseInt(input.value)
+		function callback(num) {
+	    // 1 1 2 3 5 8 13
+			// 1 2 3 4 5 6 7
+			//f(n) = f(n-1) + f(n-2)
+	    return num <=2 ? 1 : callback(num-1) + callback(num-2)
+      // if (num == 1) {
+      //   return 1
+      // }else if (num == 2) {
+      //   return 1
+      // }else {
+      //    return callback(num-1) + callback(num-2)
+			// }
+    }
+    var result = callback(num)
+		var h2 = document.getElementsByTagName('h2')[0]
+		h2.innerHTML = result
+
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="数值">
+<button>按钮</button>
+<h2></h2>
+<script>
+  var input = document.getElementsByTagName('input')[0]
+  var btn = document.getElementsByTagName('button')[0]
+  var h2 = document.getElementsByTagName('h2')[0]
+  btn.onclick = function () {
+    var num = parseInt(input.value)
+
+		//创建一个 Worker 对象
+		var worker = new Worker('./分线程.js')
+
+		//向分线程发送消息
+		worker.postMessage(num)
+    console.log('主线程发送：' + num);
+
+    //绑定接收消息事件的处理函数
+    worker.onmessage = function (event) {
+      h2.innerHTML = event.data
+      console.log('主线程接收：' + event.data);
+    }
+  }
+</script>
+</body>
+</html>

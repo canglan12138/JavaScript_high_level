@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<button>按钮</button>
+</head>
+<body>
+
+<script>
+	function fun1() {
+    console.log('fun1');
+  }
+  fun1()
+	function fun2() {
+    console.log('fun2');
+  }
+  fun2()
+	setTimeout(() => {
+    console.log('settimeout:2s');
+  },2000)
+
+	var btn = document.getElementsByTagName('button')[0]
+	btn.onclick = function () {
+    console.log('点击按钮');
+  }
+</script>
+
+</body>
+</html>
