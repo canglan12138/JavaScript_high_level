@@ -15,8 +15,12 @@ function my_module() {
         console.log('jack1');
       }
     }
+    function run() {
+      console.log('run~~~');
+    }
     return {
       info : info,
-      info2 : info2
+      info2 : info2,
+      run : run
     }
 }
