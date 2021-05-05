@@ -10,5 +10,13 @@ function my_module() {
         console.log('男');
       }
     }
-    return info
+    function info2() {
+      this.name = function () {
+        console.log('jack1');
+      }
+    }
+    return {
+      info : info,
+      info2 : info2
+    }
 }
